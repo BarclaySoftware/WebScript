@@ -3,7 +3,7 @@ editor.setTheme("ace/theme/monokai");
 editor.session.setMode("ace/mode/html");
 editor.setOptions({
     fontSize: "16px",
-    fontFamily: 'Courier Now AT',
+    fontFamily: 'code-font',
     wrap: false,
     showPrintMargin: false,
     enableBasicAutocompletion: true,
