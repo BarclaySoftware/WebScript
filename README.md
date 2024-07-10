@@ -17,6 +17,10 @@ Welcome to the official GitHub repository for WebScript, the web-based IDE for H
 6. Accidental Close Protection
     - The editor will make sure you have saved all of your work before it lets you close it.
 
+## New Features
+1. Save Dump
+    - Saves a Dotlin (.dt) file with the current state of your code as an archive so you can view versions and resore a previous version quickly.
+
 ## Work in Progress
 - [ ] Line wrap shortcut
 - [ ] Light mode

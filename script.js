@@ -14,7 +14,7 @@ editor.setOptions({
 function openFile() {
     var input = document.createElement('input');
     input.type = 'file';
-    input.accept = 'text/html';
+    input.accept = 'text/html, .dt';
     input.onchange = function(event) {
         var file = event.target.files[0];
         var reader = new FileReader();
@@ -45,8 +45,26 @@ function saveFile() {
     isModified = false;
 }
 
+function saveDump() {
+    var content = editor.getValue();
+    var blob = new Blob([content], { type: 'text/dt' });
+    var url = URL.createObjectURL(blob);
+    var a = document.createElement('a');
+    a.href = url;
+    var currentDate = new Date().toISOString().slice(0, 19).replace(/[-T:/]/g, '');
+    var fileName = 'savedump_' + currentDate + '.dt';
+    a.download = fileName;
+    document.title = fileName;
+    document.body.appendChild(a);
+    a.click();
+    window.URL.revokeObjectURL(url);
+    document.body.removeChild(a);
+    isModified = false;
+}
+
 document.getElementById('openButton').addEventListener('click', openFile);
 document.getElementById('saveButton').addEventListener('click', saveFile);
+document.getElementById('saveDump').addEventListener('click', saveDump);
 
 var isModified = false;
 
