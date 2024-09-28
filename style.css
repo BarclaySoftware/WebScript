@@ -1,22 +1,35 @@
 @font-face {
-    font-family: 'code-font';
-    src: url(https://delivercdn.pages.dev/barclay/fonts/barclay/BarclayMono.ttf);
+    font-family: 'andorraSans';
+    src: url(/assets/fonts/MilfordText.ttf);
 }
 
 @font-face {
-    font-family: 'ui-font';
-    src: url(https://delivercdn.pages.dev/barclay/fonts/barclay/BarclaySans.ttf);
+    font-family: 'SeavoltUIEmoji';
+    src: url(https://delivercdn.pages.dev/jupiter/SeavoltUI/emoji/SeavoltUIEmoji.ttf);
+}
+
+@font-face {
+    font-family: 'Gloobmoji';
+    src: url(https://delivercdn.pages.dev/jupiter/SeavoltUI/emoji/Gloobmoji.ttf);
 }
 
 html, body {
-    font-family: 'code-font', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 16px;
     margin: 0;
     padding: 0;
     height: 100%;
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    font-family: 'Roadway', 'TwemojiRubisco', Arial, Helvetica, sans-serif;
+}
+
+#logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100px;
+    z-index: 1;
 }
 
 #editor-container {
@@ -26,8 +39,8 @@ html, body {
 }
 
 #editor {
-    font-family: 'code-font';
     width: 50%;
+    font-family: 'Roadway', 'TwemojiRubisco', Arial, Helvetica, sans-serif;
     overflow: none;
 }
 
@@ -52,10 +65,10 @@ html, body {
 }
 
 button {
-    font-family: 'ui-font', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 14px;
+    font-family: 'andorraSans', 'TwemojiRubisco', Arial, Helvetica, sans-serif;
     margin-right: 8px;
     padding: 6px 12px;
+    font-size: 14px;
     cursor: pointer;
     background-color: #212121;
     color: #ffffff;
@@ -68,8 +81,12 @@ button:hover {
     color: #ffffff;
 }
 
+.monaco-editor, .suggest-widget, .monaco-list, .monaco-list-row, .monaco-highlighted-label {
+    color: #ffffff !important;
+}
+
 select {
-    font-family: 'ui-font', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'andorraSans', 'TwemojiRubisco', Arial, Helvetica, sans-serif;
     font-size: 14px;
     background-color: #212121;
     color: #ffffff;
@@ -94,61 +111,4 @@ iframe {
     width: 100%;
     height: 100%;
     border: none;
-}
-
-::-webkit-scrollbar {
-    background: #272822;
-}
-
-::-webkit-scrollbar-track {
-    background: #272822;
-}
-
-::-webkit-scrollbar-thumb {
-    background-color: #8f908a;
-    border-radius: 10px;
-    border: 3px solid #272822;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background-color: #f8f8f0;
-}
-
-::-webkit-scrollbar-thumb:active {
-    background-color: #f8f8f0;
-}
-
-@media (max-width: 768px) {
-    .button-container {
-        justify-content: center;
-        padding: 8px;
-    }
-
-    #editor-container {
-        flex-direction: column;
-        height: auto;
-    }
-
-    #editor {
-        width: 100%;
-        height: 50vh;
-    }
-
-    #preview {
-        height: 50vh;
-        border-left: none;
-        border-top: 1px solid #000;
-    }
-
-    #divider {
-        display: none;
-    }
-}
-
-@media (max-width: 480px) {
-    button, select {
-        font-size: 12px;
-        padding: 4px 8px;
-        margin-right: 4px;
-    }
 }

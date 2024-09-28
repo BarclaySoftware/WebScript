@@ -1,0 +1,40 @@
+@font-face {
+    font-family: 'andorraSans';
+    src: url(/assets/fonts/MilfordText.ttf);
+}
+
+@font-face {
+    font-family: 'SeavoltUIEmoji';
+    src: url(https://apicenter.pages.dev/internal/jupiter/cdn/fonts/konsolad.ttf);
+}
+
+@font-face {
+    font-family: 'Gloobmoji';
+    src: url(https://delivercdn.pages.dev/jupiter/SeavoltUI/emoji/Gloobmoji.ttf);
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roadway', 'TwemojiRubisco', Arial, Helvetica, sans-serif;
+}
+
+#editor-container {
+    flex: 1;
+    display: flex;
+    height: 100%;
+}
+
+#editor {
+    width: 100%;
+    font-family: 'Roadway', 'TwemojiRubisco', Arial, Helvetica, sans-serif;
+    overflow: none;
+}
+
+.monaco-editor, .suggest-widget, .monaco-list, .monaco-list-row, .monaco-highlighted-label {
+    color: #ffffff !important;
+}
