@@ -99,7 +99,7 @@ require.config({ paths: { 'vs': 'andorra/min/vs' } });
         });
 
         // Load the custom font and remeasure fonts once it's loaded
-        const font = new FontFace('andorraMono', 'url()');
+        const font = new FontFace('andorraMono', 'url(https://webscript.pages.dev/LaurentiaCode-VF.ttf)');
 
         font.load().then(() => {
             document.fonts.add(font);
