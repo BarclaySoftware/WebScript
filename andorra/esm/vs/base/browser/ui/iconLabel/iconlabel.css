@@ -102,7 +102,7 @@
 .monaco-icon-label::after {
 	opacity: 0.75;
 	font-size: 90%;
-	font-weight: 600;
+	font-weight: 700;
 	margin: auto 16px 0 5px; /* https://github.com/microsoft/vscode/issues/113223 */
 	text-align: center;
 }

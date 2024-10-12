@@ -830,7 +830,7 @@
 .monaco-icon-label::after {
 	opacity: 0.75;
 	font-size: 90%;
-	font-weight: 600;
+	font-weight: 700;
 	margin: auto 16px 0 5px; /* https://github.com/microsoft/vscode/issues/113223 */
 	text-align: center;
 }
@@ -3291,7 +3291,7 @@
 						}
 
 .monaco-component.multiDiffEditor .multiDiffEntry .header .header-content .file-path .status {
-						font-weight: 600;
+						font-weight: 700;
 						opacity: 0.75;
 						margin: 0px 10px;
 						line-height: 22px;
@@ -5982,7 +5982,7 @@
 
 .action-widget .monaco-list-row.group-header {
 	color: var(--vscode-descriptionForeground) !important;
-	font-weight: 600;
+	font-weight: 700;
 }
 
 .action-widget .monaco-list .group-header,
@@ -6468,7 +6468,7 @@
 
 /* Quick input separators as full-row item */
 .quick-input-list .quick-input-list-separator-as-item .label-name {
-	font-weight: 600;
+	font-weight: 700;
 }
 
 .quick-input-list .quick-input-list-separator-as-item .label-description {
