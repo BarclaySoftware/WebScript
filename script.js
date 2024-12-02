@@ -60,7 +60,7 @@ require.config({ paths: { 'vs': 'andorra/min/vs' } });
             scrollBeyondLastLine: true,
             minimap: { enabled: true },
             lineNumbers: 'on',
-            wordWrap: 'on',
+            wordWrap: 'off',
             suggestOnTriggerCharacters: true,
             quickSuggestions: { other: true, comments: true, strings: true },
             parameterHints: { enabled: true },
