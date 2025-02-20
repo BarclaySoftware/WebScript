@@ -1,6 +1,6 @@
-require.config({ paths: { 'vs': 'andorra/min/vs' } });
+require.config({ paths: { 'vs': 'https://cdn360.pages.dev/library/andorra/min/vs' } });
     require(['vs/editor/editor.main'], function () {
-        monaco.editor.defineTheme('WebScript', {
+        andorra.editor.defineTheme('WebScript', {
             base: 'vs-dark',
             inherit: true,
             rules: [
@@ -50,13 +50,13 @@ require.config({ paths: { 'vs': 'andorra/min/vs' } });
             }
         });
         
-        var editor = monaco.editor.create(document.getElementById('editor'), {
+        var editor = andorra.editor.create(document.getElementById('editor'), {
             value: `<!--This is where your HTML, JavaScript, and CSS code goes.-->`,
             language: 'html',
             theme: 'WebScript',
             automaticLayout: true,
             fontSize: 16,
-            fontFamily: 'andorraMono, Gloobmoji, SeavoltUIEmoji, monospace',
+            fontFamily: 'Laurentia Code, RubiscoEmojiColor, monospace',
             scrollBeyondLastLine: true,
             minimap: { enabled: true },
             lineNumbers: 'on',
@@ -103,7 +103,7 @@ require.config({ paths: { 'vs': 'andorra/min/vs' } });
 
         font.load().then(() => {
             document.fonts.add(font);
-            monaco.editor.remeasureFonts();
+            andorra.editor.remeasureFonts();
         }).catch((error) => {
             console.error('Error loading custom font:', error);
         });
@@ -207,12 +207,12 @@ require.config({ paths: { 'vs': 'andorra/min/vs' } });
                 openFile();
             } else if (event.altKey && event.key === 'm') {
                 event.preventDefault();
-                var minimapEnabled = editor.getOption(monaco.editor.EditorOption.minimap).enabled;
+                var minimapEnabled = editor.getOption(andorra.editor.EditorOption.minimap).enabled;
                 editor.updateOptions({ minimap: { enabled: !minimapEnabled } });
                 document.getElementById('minimapSelect').value = minimapEnabled ? 'off' : 'on';
             } else if (event.altKey && event.key === 'z') {
                 event.preventDefault();
-                var wordWrapEnabled = editor.getOption(monaco.editor.EditorOption.wordWrap) === 'on';
+                var wordWrapEnabled = editor.getOption(andorra.editor.EditorOption.wordWrap) === 'on';
                 editor.updateOptions({ wordWrap: wordWrapEnabled ? 'off' : 'on' });
                 document.getElementById('lineWrapSelect').value = wordWrapEnabled ? 'off' : 'on';
             }
