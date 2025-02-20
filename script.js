@@ -4,13 +4,13 @@ require.config({ paths: { 'vs': 'https://cdn360.pages.dev/library/andorra/min/vs
             base: 'vs-dark',
             inherit: true,
             rules: [
-                { token: 'identifier', foreground: '9cdcfe'},
+                { token: 'identifier', foreground: '9cdcfe' },
                 { token: 'operators', foreground: '000000' },
                 { token: 'keyword', foreground: '569dda' },
                 { token: 'string', foreground: 'd69d85' },
                 { token: 'string.escape', foreground: 'd69d85' },
-                { token: 'comment', foreground: '58a74a' },
-                { token: 'comment.doc', foreground: '58a74a' },
+                { token: 'comment', foreground: '58a74a', fontStyle: 'italic' },
+                { token: 'comment.doc', foreground: '58a74a', fontStyle: 'italic' },
                 { token: 'constant', foreground: '000000' },
                 { token: 'delimiter.curly', foreground: 'd8a0e1' },
                 { token: 'delimiter.square', foreground: 'd8a0e1' },
@@ -25,7 +25,7 @@ require.config({ paths: { 'vs': 'https://cdn360.pages.dev/library/andorra/min/vs
                 { token: 'variable.name', foreground: '4ecab0' },
                 { token: 'variable.value', foreground: '9cdcfe' },
                 { token: 'entity', foreground: '000000' },
-                { token: 'tag', foreground: '579dd7' },
+                { token: 'tag', foreground: '579dd7', fontStyle: 'bold' },
                 { token: 'info-token', foreground: '9ce582' },
                 { token: 'warn-token', foreground: 'fff2aa' },
                 { token: 'error-token', foreground: 'ff3f37' },
@@ -56,7 +56,7 @@ require.config({ paths: { 'vs': 'https://cdn360.pages.dev/library/andorra/min/vs
             theme: 'WebScript',
             automaticLayout: true,
             fontSize: 16,
-            fontFamily: 'Laurentia Code, RubiscoEmojiColor, monospace',
+            fontFamily: `'Laurentia Code', 'RubiscoEmojiColor', monospace`,
             scrollBeyondLastLine: true,
             minimap: { enabled: true },
             lineNumbers: 'on',
@@ -91,6 +91,7 @@ require.config({ paths: { 'vs': 'https://cdn360.pages.dev/library/andorra/min/vs
             wordBreak: 'normal',
             wrappingStrategy: 'advanced',
 
+            
         });
 
         editor.onDidChangeModelContent(() => {
@@ -102,7 +103,7 @@ require.config({ paths: { 'vs': 'https://cdn360.pages.dev/library/andorra/min/vs
         const font = new FontFace('andorraMono', 'url(https://webscript.pages.dev/LaurentiaCode-VF.ttf)');
 
         font.load().then(() => {
-            document.fonts.add(font);
+            // document.fonts.add(font);
             andorra.editor.remeasureFonts();
         }).catch((error) => {
             console.error('Error loading custom font:', error);
